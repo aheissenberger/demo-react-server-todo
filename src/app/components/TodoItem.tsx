@@ -7,19 +7,19 @@ import { Todo } from '../../lib/types'
 
 export function TodoItem({ todo }: { todo: Todo }) {
   //const router = useRouter()
-  const { refresh } = useClient();
+  //const { refresh } = useClient();
 
 
   const handleToggle = async () => {
     await toggleTodo(todo.id)
     //router.refresh()
-    refresh()
+    //refresh()
   }
 
   const handleDelete = async () => {
     await deleteTodo(todo.id)
     //router.refresh()
-    refresh()
+    //refresh()
   }
 
   return (

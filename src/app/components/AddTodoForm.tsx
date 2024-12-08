@@ -8,7 +8,7 @@ import { addTodo } from '../../lib/actions'
 export function AddTodoForm() {
   const [text, setText] = useState('')
   //const router = useRouter()
-  const { refresh } = useClient();
+  //const { refresh } = useClient(); // react-server specific
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -16,7 +16,7 @@ export function AddTodoForm() {
       await addTodo(text)
       setText('')
       //router.refresh()
-      refresh()
+      //refresh()
     }
   }
 
